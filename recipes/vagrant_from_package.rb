@@ -11,3 +11,8 @@ package "vagrant" do
   source  vagrant_pkg_path
   provider Chef::Provider::Package::Dpkg
 end
+
+cookbook_file "/etc/profile.d/vagrant.sh" do
+  source  "vagrant.sh"
+  mode    '0644'
+end
